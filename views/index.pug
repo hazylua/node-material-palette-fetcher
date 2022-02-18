@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  div.container.px-1.mx-auto
+    h1.mt-1.text-2xl Palette Generator
+    p.mt-4 A simple material UI color palette generator.
+    form.flex.flex-col.gap-3.items-start.px-4.mt-12(id="colors" action="/colors?color=" method="/get")
+      label.block
+        span.mr-3 Input color:
+        input#color(class="px-2 mr-2 w-auto border-solid box-border outline outline-2 outline-purple focus_outline-blue" placeholder="#" name="color")
+      input.py-1.px-2.rounded.bg-gray-light(type="submit" value="Generate")
+
+      section.mt-6
+        if palette != null
+          for color in palette
+            li(style={color: color, height: '20px', width: '20px'},)
+        else
+          p Nothing here.
