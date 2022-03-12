@@ -41,6 +41,6 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-console.log(`Serving on ${process.env.PORT}`)
+console.log(`Serving on port ${process.env.PORT}.`)
 
 module.exports = app;
