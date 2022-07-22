@@ -1,0 +1,15 @@
+module.exports = {
+  singleQuote: true,
+  jsxSingleQuote: true,
+  semi: true,
+  tabWidth: 2,
+  printWidth: 80,
+  bracketSpacing: true,
+  jsxBracketSameLine: false,
+  arrowParens: "always",
+  trailingComma: "all",
+  importOrder: ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
+};
+   
