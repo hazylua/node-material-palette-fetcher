@@ -1,3 +1,6 @@
+require('dotenv').config();
+// console.log(process.env);
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -37,5 +40,7 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+console.log(`Serving on port ${process.env.PORT}.`)
 
 module.exports = app;
