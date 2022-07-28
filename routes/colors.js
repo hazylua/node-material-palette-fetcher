@@ -4,9 +4,10 @@ const palette = require('material-color-tool/lib/palette');
 var router = express.Router();
 
 /**
- * @see https://github.com/Ignigena/material-color-tool
+ * @see https://github.com/Ignigena/material-color-tool/
  * @see https://material.io/inline-tools/color/
  * @see https://materialui.co/
+ * @see https://chir.ag/projects/name-that-color/
  */
 router.get('/', function (req, res, next) {
   let palette = makePalette(req.query.color);
